@@ -85,7 +85,7 @@ const submitCode = async () => {
         // Multiple inputs handling
          const inputs = stdin.split('\n');  // Split stdin into an array of inputs
   
-        const response = await axios.post('http://localhost:5001/api/submit-code', {
+        const response = await axios.post('https://collaborative-editor-21a71afc49c0.herokuapp.com/api/submit-code', {
           sourceCode,           // Send raw source code as is
           languageId: selectedValue, // Send languageId directly
           stdin: inputs,     
@@ -96,7 +96,7 @@ const submitCode = async () => {
   
         const fetchResult = async () => {
           const resultResponse = await axios.get(
-            `http://localhost:5001/api/submission-result/${submissionId}`
+            `https://collaborative-editor-21a71afc49c0.herokuapp.com/api/submission-result/${submissionId}`
           );
   
           const { status, stdout, stderr } = resultResponse.data;
