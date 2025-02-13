@@ -26,7 +26,7 @@ function Editor({ socketRef, roomId, onCodeChange }) {
           lineNumbers: true,
         }
       );
-      // for sync the code
+      // for sync the codes
       editorRef.current = editor;
 
       editor.setSize(null, "100%");
